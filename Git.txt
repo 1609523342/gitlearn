@@ -1,0 +1,44 @@
+$ mkdir xxx                  创建git仓库文件夹，名为xxx
+$ cd xxx                     打开进入名为xxx的文件夹
+$ pwd                        显示当前目录
+$ git init                   初始化Git仓库
+$ git add xxx                把xxx文件添加进仓库
+$ git commit -m "xxx"        把文件提交到仓库 -m后面的xxx指的是本次提交的说明（commit一次可以提交多个文件）
+$ git status                 查询仓库当前状态
+$ git diff                   比较工作目录中当前文件和暂存区域快照之间的差异并显示出来
+$ git log                    显示从最近到最远的提交日志
+$ git reset                  把文件退回到某个版本
+$ git reflog                 查询命令历史
+$ git checkout               切换工作树或者把当次文件的修改清空，退回到最近的一次版本或者刚存到缓存区的版本，也可以当做“一键还原“
+$ git reset HEAD <file>      把暂存区的修改撤销掉重新放回工作区
+$ rm                         删除文件
+$ git rm                     从版本库删除文件
+$ git remote add origin XXX  添加一个远程仓库的位置
+$ git clone                  克隆一份文件或者仓库等
+$ Is                         显示目标列表
+$ git branch 				 查看当前分支
+$ git merge                  合并指定分支到当前分支
+$ git branch <name>          创建分支
+$ git branch -d <name>       删除分支
+$ git log --graph            查看分支合并图
+$ git merge --no-ff参数      可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并
+$ git merge （通常用fast forward） 合并就看不出来曾经做过合并
+$ git stash list             查看存储在stash的工作区列表
+$ git stash apply            恢复保存在stash的内容，但stash中的内容并不删除
+$ git stash drop             删除stash中的内容
+$ git stash pop              恢复保存在stash中的内容并将其从stash中删除
+$ git branch -D <name>       强行丢弃一个没有被合并过的分支
+$ git push origin <branch-name>  推送自己的修改
+$ git pull                   取回远程主机某个分支的更新，再与本地的指定分支合并
+$ git remote -v				 查看远程库信息
+$ git branch --set-upstream branch-name origin/branch-name   建立本地分支和远程分支的关联
+$ it checkout -b branch-name origin/branch-name   在本地创建和远程分支对应的分支
+$ git rebase                 它会把整个 副分支移动到主分支的后面，有效地把所有 master 分支上新的提交并入过来，但是，rebase 为原分支上每一个提交创建一个新的提交，重写了项目历史，并且不会带来合并提交。
+$ git tag <name>             用于新建一个标签，默认为HEAD，也可以指定一个commit id
+$ git tag                    查看所有标签
+$ git tag -a <tagname> -m "blablabla..."  可以指定标签信息
+$ git push origin <tagname>  推送一个本地标签
+$ git push origin --tags     可以推送全部未推送过的本地标签
+$ git tag -d <tagname>       可以删除一个本地标签
+$ git push origin :refs/tags/<tagname>   可以删除一个远程标签
+$ git last                   显示最近一次的提交
